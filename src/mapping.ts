@@ -1,4 +1,4 @@
-import { NewGravatar, UpdatedGravatar } from './types/Gravity/Gravity'
+import { CreateGravatarCall, NewGravatar, UpdatedGravatar } from './types/Gravity/Gravity'
 import { Gravatar } from './types/schema'
 
 export function handleNewGravatar(event: NewGravatar): void {
@@ -19,4 +19,7 @@ export function handleUpdatedGravatar(event: UpdatedGravatar): void {
   gravatar.displayName = event.params.displayName
   gravatar.imageUrl = event.params.imageUrl
   gravatar.save()
+}
+
+export function handleCreateGravatar(call: CreateGravatarCall): void {
 }
